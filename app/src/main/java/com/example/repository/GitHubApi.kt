@@ -1,6 +1,7 @@
-package com.example.repository
+package com.example.testing.repository
 
-import com.example.model.SearchResponse
+
+import com.example.testing.model.SearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers

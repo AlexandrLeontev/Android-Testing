@@ -1,5 +1,6 @@
-package com.example.presenter
+package com.example.testing.presenter
 
 internal interface PresenterContract {
-    fun searchGitHub(searchQuery: String)
+    fun onAttach()
+    fun onDetach()
 }

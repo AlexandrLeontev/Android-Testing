@@ -1,12 +1,12 @@
-package com.example.view
+package com.example.testing.view.search
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.model.SearchResult
 import com.example.testing.R
-import com.example.view.SearchResultAdapter.SearchResultViewHolder
+import com.example.testing.model.SearchResult
+import com.example.testing.view.search.SearchResultAdapter.SearchResultViewHolder
 import kotlinx.android.synthetic.main.list_item.view.*
 
 internal class SearchResultAdapter : RecyclerView.Adapter<SearchResultViewHolder>() {
