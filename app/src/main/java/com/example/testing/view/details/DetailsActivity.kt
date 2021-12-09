@@ -18,12 +18,6 @@ class DetailsActivity : AppCompatActivity(), ViewDetailsContract {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
         setUI()
-        presenter.onAttach()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onDetach()
     }
 
     private fun setUI() {
