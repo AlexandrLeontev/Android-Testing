@@ -3,6 +3,7 @@ package com.example.testing
 import com.example.testing.model.SearchResponse
 import com.example.testing.repository.GitHubApi
 import com.example.testing.repository.GitHubRepository
+import com.example.testing.repository.RepositoryCallback
 import okhttp3.Request
 import okio.Timeout
 import org.junit.Before
@@ -33,6 +34,7 @@ class GitHubRepositoryTest {
         val call = mock(Call::class.java) as Call<SearchResponse?>
 
         `when`(gitHubApi.searchGithub(searchQuery)).thenReturn(call)
+        repository.searchGithub(searchQuery, mock(RepositoryCallback::class.java))
         verify(gitHubApi, times(1)).searchGithub(searchQuery)
     }
 
@@ -40,6 +42,7 @@ class GitHubRepositoryTest {
     fun searchGithub_TestCallback() {
         val searchQuery = "some query"
         val response = mock(Response::class.java) as Response<SearchResponse?>
+        val gitHubRepositoryCallBack = mock(RepositoryCallback::class.java)
 
         val call = object : Call<SearchResponse?> {
             override fun enqueue(callback: Callback<SearchResponse?>) {
@@ -76,6 +79,10 @@ class GitHubRepositoryTest {
         }
 
         `when`(gitHubApi.searchGithub(searchQuery)).thenReturn(call)
+        repository.searchGithub(searchQuery, gitHubRepositoryCallBack)
+
+        verify(gitHubRepositoryCallBack, times(1)).handleGitHubResponse(response)
+        verify(gitHubRepositoryCallBack, times(1)).handleGitHubError()
     }
 
     @Test
@@ -83,11 +90,19 @@ class GitHubRepositoryTest {
         val searchQuery = "some query"
         val call = mock(Call::class.java) as Call<SearchResponse?>
         val callBack = mock(Callback::class.java) as Callback<SearchResponse?>
+        val gitHubRepositoryCallBack = mock(RepositoryCallback::class.java)
         val response = mock(Response::class.java) as Response<SearchResponse?>
 
         `when`(gitHubApi.searchGithub(searchQuery)).thenReturn(call)
         `when`(call.enqueue(callBack)).then {
             callBack.onResponse(any(), any())
         }
+        `when`(callBack.onResponse(any(), any())).then {
+            gitHubRepositoryCallBack.handleGitHubResponse(response)
+        }
+
+        repository.searchGithub(searchQuery, gitHubRepositoryCallBack)
+
+        verify(gitHubRepositoryCallBack, times(1)).handleGitHubResponse(response)
     }
 }

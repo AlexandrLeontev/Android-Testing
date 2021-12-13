@@ -1,4 +1,4 @@
-package com.example.testing
+package com.example.testing.espresso
 
 import android.view.View
 import androidx.test.core.app.ActivityScenario
@@ -9,6 +9,8 @@ import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.testing.BuildConfig
+import com.example.testing.R
 import com.example.testing.view.search.MainActivity
 import org.hamcrest.Matcher
 import org.junit.After

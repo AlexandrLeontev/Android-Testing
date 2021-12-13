@@ -1,4 +1,4 @@
-package com.example.testing
+package com.geekbrains.tests
 
 import com.example.testing.model.SearchResponse
 import com.example.testing.model.SearchResult
