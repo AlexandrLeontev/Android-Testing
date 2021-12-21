@@ -1,5 +1,6 @@
 package com.example.testing.model
 
+import com.example.testing.model.SearchResult
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 

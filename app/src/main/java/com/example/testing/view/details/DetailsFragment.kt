@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.example.testing.R
 import com.example.testing.presenter.details.DetailsPresenter
 import com.example.testing.presenter.details.PresenterDetailsContract
-import kotlinx.android.synthetic.main.activity_details.*
 import kotlinx.android.synthetic.main.fragment_details.*
 import java.util.*
 

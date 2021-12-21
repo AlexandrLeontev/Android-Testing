@@ -1,4 +1,4 @@
-package com.geekbrains.tests.automator
+package com.example.testing.automator
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider

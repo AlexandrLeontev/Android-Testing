@@ -12,7 +12,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.testing.BuildConfig
 import com.example.testing.R
 import com.example.testing.view.search.SearchResultAdapter
-import com.geekbrains.tests.view.search.MainActivity
+import com.example.testing.view.search.MainActivity
 import org.hamcrest.Matcher
 import org.junit.After
 import org.junit.Before

@@ -10,7 +10,7 @@ import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
 import com.example.testing.R
-import com.geekbrains.tests.view.search.MainActivity
+import com.example.testing.view.search.MainActivity
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.allOf
