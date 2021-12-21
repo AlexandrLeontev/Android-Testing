@@ -1,4 +1,4 @@
-package com.example.testing.view.search
+package com.geekbrains.tests.view.search
 
 import android.os.Bundle
 import android.view.View
@@ -16,7 +16,8 @@ import com.example.testing.repository.FakeGitHubRepository
 import com.example.testing.repository.GitHubApi
 import com.example.testing.repository.GitHubRepository
 import com.example.testing.view.details.DetailsActivity
-import kotlinx.android.synthetic.main.activity_details.*
+import com.example.testing.view.search.SearchResultAdapter
+import com.example.testing.view.search.ViewSearchContract
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

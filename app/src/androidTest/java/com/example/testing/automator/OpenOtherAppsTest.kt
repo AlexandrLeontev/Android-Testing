@@ -1,4 +1,4 @@
-package com.example.testing.automator
+package com.geekbrains.tests.automator
 
 import android.widget.TextView
 import androidx.test.ext.junit.runners.AndroidJUnit4

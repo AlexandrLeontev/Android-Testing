@@ -1,4 +1,4 @@
-package com.example.testing.automator
+package com.geekbrains.tests.automator
 
 import android.content.Context
 import android.content.Intent
@@ -13,7 +13,7 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiObject2
 import androidx.test.uiautomator.Until
-import com.example.testing.R
+import com.geekbrains.tests.R
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
